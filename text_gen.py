@@ -27,10 +27,11 @@ class text_gen():
 		buffer =  w.readframes(frames)
 		data16 = np.frombuffer(buffer,dtype = np.int16)
 		text = model.stt(data16)
-		print(text)
+		return text 
 
 	def text_from_recording(self):
 		recording = user_audio()
 		recording.record()
-		self.text_from_file('samples/test.wav')
+		text = self.text_from_file('samples/test.wav')
+		return text 
 
