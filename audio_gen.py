@@ -3,7 +3,7 @@ import wave
 
 class user_audio:
 
-	def __init__(self, chunk=1024,channels = 2,fs=16000,seconds=4,filename = 'samples/test.wav'):
+	def __init__(self, chunk=1024,channels = 1,fs=16000,seconds=4,filename = 'samples/test.wav'):
 		self.chunk = chunk # Recording in chunks of 1024 samples by default  
 		self.channels = channels 
 		self.fs = fs 
