@@ -15,9 +15,26 @@ classifier = TextClassifier.load('en-sentiment')
 class sentiment:
 	def __init__(self):
 		self.classifier = classifier
-
+	# if you have just used speech to text you can use this 
 	def from_text(self, text):
 		sentence = Sentence(text)
 		self.classifier.predict(sentence)
-		return sentence.labels
+		return sentence.labels[0]
+	# generates the sentiment analysis of the last recording/file for which the speech to text was done
+	def recent(self):
+		file = open('temp.txt', 'r')
+		lines = file.readlines()
+		arr = []
+		for line in lines:
+			arr.append(line.strip())
+		output = []
+		for i in range(1, len(arr)):
+			output.append(self.from_text(arr[i]))
+		return output
+	# live sentuiment analysis from audio recording 
+	def from_audio(self):
+		recording = text_gen()
+		text = recording.text_from_recording()
+		return self.from_text(text)
+
 
