@@ -28,10 +28,10 @@ class sentiment:
 		for line in lines:
 			arr.append(line.strip())
 		output = []
-		for i in range(1, len(arr)):
+		for i in range(len(arr)):
 			output.append(self.from_text(arr[i]))
 		return output
-	# live sentuiment analysis from audio recording 
+	# live sentiment analysis from audio recording 
 	def from_audio(self):
 		recording = text_gen()
 		text = recording.text_from_recording()
