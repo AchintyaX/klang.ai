@@ -22,12 +22,16 @@ class NER:
 		for entity in entities:
 			ner_dict[entity['text']]= entity['labels']
 		return ner_dict
-	'''def recent(self):
+	def recent(self):
 		file =  open('temp.txt','r')
 		lines = file.readlines()
 		arr = []
 		for line in lines:
-			arr.append(line.strip())'''
+			arr.append(line.strip())
+		output = []
+		for i in range(len(arr)):
+			output.append(self.from_text(arr[i]))
+		return output
 	def from_recording(self):#returns a dictionary of names and labels from recorded audio
 		recording = text_gen()
 		text = recording.text_from_recording()
