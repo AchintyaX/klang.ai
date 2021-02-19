@@ -5,6 +5,7 @@ We have designed the toolkit to be able to perform various forms of analysis on 
 So far, we have been able to add the features of - 
 1. Sentiment Analysis - telling the sentiment of the audio, and how negative or positive it is 
 2. Named Entity Recognition - Telling the named enity like name of a person or a place that has been mentioned in the audio
+<br>
 Features in Development - 
 1. Aspect Based Sentiment Analysis - finding the sentiment of the audio with respect to a given term present in it 
 2. Keyword Identification - Given  a set of words, the model would tell if this word of words similar to the given words have been used in the audio. 
