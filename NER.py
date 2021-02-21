@@ -1,5 +1,5 @@
 from audio_gen import user_audio
-from text_gen import text_gen
+from wav2vec import text_gen
 
 import numpy as np
 import wave
