@@ -41,23 +41,21 @@ class sentiment:
 		text = recording.text_from_recording()
 		return self.from_text(text)
 
-
+# Emotion Detection Module 
 class emotion:
 	def __init__(self):
 		self.tokenizer = tokenizer
 		self.model = model
 	
 	# getting the emotion from text 
-	def from_text (self, text):
+	def from_text(self, text):
 		input_ids = self.tokenizer.encode(text + '</s>', return_tensors='pt')
 		output = self.model.generate(input_ids=input_ids,max_length=2)
 
 		dec = [self.tokenizer.decode(ids) for ids in output]
 		label = dec[0]
 		return label
-    	
-
-		
+    		
 	# Emotion Detection from direct audio  file 	
 	def from_audio(self):
 		recording = text_gen()
