@@ -37,8 +37,8 @@ class NER:
 		text = recording.text_from_recording()
 		return self.from_text(text)
 
-	def from_file(self,filename):#returns a dictionary of names and labels from file containing recorded audio
-		recording = text_gen()
+	def from_file(self,filename, model=None):#returns a dictionary of names and labels from file containing recorded audio
+		recording = text_gen(model)
 		text = recording.text_from_file(filename)
 		return self.from_text(text)
 
