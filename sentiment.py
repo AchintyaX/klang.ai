@@ -36,8 +36,9 @@ class sentiment:
 			output.append(self.from_text(arr[i]))
 		return output
 	# live sentiment analysis from audio recording 
-	def from_audio(self):
-		recording = text_gen()
+	# model : 'deepspeech' or 'wav2vec'
+	def from_audio(self, model=None):
+		recording = text_gen(model=model)
 		text = recording.text_from_recording()
 		return self.from_text(text)
 
@@ -57,8 +58,9 @@ class emotion:
 		return label
     		
 	# Emotion Detection from direct audio  file 	
-	def from_audio(self):
-		recording = text_gen()
+	# model : 'deepspeech' or 'wav2vec'
+	def from_audio(self, model=None):
+		recording = text_gen(model=model)
 		text = recording.text_from_recording()
 		return self.from_text(text)
 

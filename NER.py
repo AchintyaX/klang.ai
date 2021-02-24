@@ -32,8 +32,8 @@ class NER:
 		for i in range(len(arr)):
 			output.append(self.from_text(arr[i]))
 		return output
-	def from_recording(self):#returns a dictionary of names and labels from recorded audio
-		recording = text_gen()
+	def from_audio(self, model=None):#returns a dictionary of names and labels from recorded audio
+		recording = text_gen(model)
 		text = recording.text_from_recording()
 		return self.from_text(text)
 
