@@ -52,7 +52,7 @@ class text_gen():
 	# path - filepath to the directory containing all the audio files
 	# at the moment we only support .wav extension	
 	def folder_stream(self, path):
-		wav_files = glob.glob(path+'*.wav')
+		wav_files = glob.glob(path+'/*.wav')
 		arr = []
 		for i in wav_files:
 			x = self.text_from_file(i, stream=True)
