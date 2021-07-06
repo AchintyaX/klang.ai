@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "klang.ai"
+version = "0.1.0"
+description = "Deep Voice Analytics tool"
+authors = ["Achintya Shankhdhar <achintyashankhdhar@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+deepspeech = "^0.9.3"
+Wave = "^0.0.2"
+numpy = "^1.21.0"
+PyAudio = "^0.2.11"
+SoundFile = "^0.10.3"
+glob2 = "^0.7"
+torch = "^1.9.0"
+tensorflow = "^2.5.0"
+tensorflow-hub = "^0.12.0"
+transformers = "^4.8.2"
+flair = "^0.8.0"
+spacy = "^3.0.6"
+gensim = "^4.0.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
