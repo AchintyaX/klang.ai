@@ -1,0 +1,7 @@
+temp.txt
+results.txt
+samples
+audio
+deepspeech-0.9.3-models.pbmm
+deepspeech-0.9.3-models.scorer
+__pycache__
